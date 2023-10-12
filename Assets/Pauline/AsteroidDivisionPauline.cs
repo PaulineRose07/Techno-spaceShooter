@@ -8,6 +8,7 @@ public class AsteroidDivisionPauline : EnemyBaseClass
     [SerializeField] GameObject m_subAsteroids;
     AsteroidsSpawnerPauline m_spawner;
     [SerializeField] private int m_damages;
+    [SerializeField] ParticleSystem m_particles;
 
 
     internal override void TakeDamage(int m_damagePoints)
@@ -17,12 +18,13 @@ public class AsteroidDivisionPauline : EnemyBaseClass
         {
             m_spawner.UpdateAsteroidCount(-1);
             Destroy(gameObject);
-            //Particles
+            Instantiate(m_particles, transform.position, Quaternion.identity);
             if (m_subAsteroids != null)
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    Instantiate(m_subAsteroids, transform.position, Quaternion.identity);
+                    var newAsteroid=Instantiate(m_subAsteroids, transform.position, Quaternion.identity);
+                    newAsteroid.GetComponent<AsteroidDivisionPauline>().SetSpawner(m_spawner);
                 }
             }
         }

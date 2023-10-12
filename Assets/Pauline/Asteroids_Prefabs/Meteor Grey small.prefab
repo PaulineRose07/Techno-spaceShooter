@@ -71,7 +71,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
 --- !u!50 &7092980253976260497
 Rigidbody2D:
   serializedVersion: 4
@@ -195,3 +195,4 @@ MonoBehaviour:
   m_speed: 2
   m_subAsteroids: {fileID: 0}
   m_damages: 1
+  m_particles: {fileID: 3875161450026506196, guid: 23ad78072fdc7ac48a871918b6db2cb7, type: 3}

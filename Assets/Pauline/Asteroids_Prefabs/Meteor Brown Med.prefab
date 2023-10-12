@@ -195,3 +195,4 @@ MonoBehaviour:
   m_speed: 1
   m_subAsteroids: {fileID: 7402460052027420659, guid: a5fe5797d4af36b47a596708b2fb89e1, type: 3}
   m_damages: 1
+  m_particles: {fileID: 5165678985586532832, guid: 9a88025dcec65dc4bb8f0abdb28b39c3, type: 3}
